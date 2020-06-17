@@ -1,8 +1,13 @@
-{% extends 'base.html' %}
-
 {% block content %}
-<main>
-    <h1>Welcome to Blog App</h1>
-</main>
+  <main>
+      <h1>Welcome to Blog App</h1>
+  </main>
+
+  <h3>Post List</h3>
+  <ul>
+  {% for post in object_list %}
+      <li>Post : {{ post.title }} : {{ post.body }}</a></li>
+  {% endfor %}
+  </ul>
 
 {% endblock content %}
